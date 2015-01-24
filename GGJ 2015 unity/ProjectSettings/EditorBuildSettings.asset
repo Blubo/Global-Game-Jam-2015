@@ -5,7 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene3C.unity
   - enabled: 1
-    path: Assets/Scenes/ScoreScreen.unity
+    path: Assets/Scenes/Scenes de jeu/TitleScreen.unity
+  - enabled: 1
+    path: Assets/Scenes/Scenes de jeu/ScoreScreen.unity
+  - enabled: 1
+    path: Assets/Scenes/Scenes de jeu/CountdownScreen.unity
+  - enabled: 1
+    path: Assets/Scenes/Scenes de jeu/CreditsScreen.unity
+  - enabled: 1
+    path: Assets/Scenes/Scenes de jeu/secondPlaytest.unity

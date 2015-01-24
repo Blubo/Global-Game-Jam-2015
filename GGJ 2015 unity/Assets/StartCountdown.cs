@@ -95,6 +95,8 @@ public class StartCountdown : MonoBehaviour {
 		goHam1.gameObject.guiText.enabled=false;
 
 		//Passage au gameplay
-		Application.LoadLevel("GameScene");
+//		Application.LoadLevel("GameScene");
+		Application.LoadLevel("secondPlaytest");
+
 	}
 }
