@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ScoreManager : MonoBehaviour {
 
 	private GameObject _LastGoalHit;
+
+	public List<AudioClip> _SonLourds;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +24,7 @@ public class ScoreManager : MonoBehaviour {
 		if(_collider.tag == "Goal" && _LastGoalHit != _collider.gameObject){
 			_LastGoalHit = _collider.gameObject;
 			GetComponent<PlayerState>()._Score += 1;
+			audio.PlayOneShot (_SonLourds [Random.Range (0, _SonLourds.Count)]);
 		}
 	}
 
