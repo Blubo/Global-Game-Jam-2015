@@ -47,7 +47,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: .263417006, z: 0, w: .964682102}
+  m_LocalRotation: {x: 0, y: .713319421, z: 0, w: .700839102}
   m_LocalPosition: {x: -39.5809441, y: 0, z: 2.64256167}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -187,7 +187,7 @@ TrailRenderer:
       serializedVersion: 2
       rgba: 16777215
   m_MinVertexDistance: .100000001
-  m_Autodestruct: 1
+  m_Autodestruct: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
