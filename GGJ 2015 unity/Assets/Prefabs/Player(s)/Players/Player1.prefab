@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
+  - 82: {fileID: 8200000}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -48,7 +49,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: .263417006, z: 0, w: .964682102}
-  m_LocalPosition: {x: -39.3990784, y: 0, z: 20.0457497}
+  m_LocalPosition: {x: -6.39021683, y: .0458984375, z: 3.07995987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -78,7 +79,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 724b7da3db9ae134b8d788bea864c2a4, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -147,6 +148,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &8200000
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!96 &9600000
 TrailRenderer:
   m_ObjectHideFlags: 1
@@ -199,6 +258,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4677fdbb63b2347b139b9e1cff74ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _SonLourds:
+  - {fileID: 8300000, guid: accf46181be74c140a3102d75dbba819, type: 3}
+  - {fileID: 8300000, guid: 0eeba7305fb60444488f649bf25e6218, type: 3}
+  - {fileID: 8300000, guid: 426a3ed3e56e4184bb6b3fa1b65f0308, type: 3}
+  - {fileID: 8300000, guid: 616e7bf2d1e462746a3442180771a5e0, type: 3}
+  - {fileID: 8300000, guid: 3c40e7175c8c02a46b6f0221e727705d, type: 3}
+  - {fileID: 8300000, guid: 3d641d6377991e54abd94b84a4077ee4, type: 3}
+  - {fileID: 8300000, guid: 617916eec88d9e047b71dca94e99ae31, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,6 +295,20 @@ MonoBehaviour:
   v_speed: 2000
   v_speedLoss: 100
   v_rotationSpeedOnRebound: 1
+  _OnCollision:
+  - {fileID: 8300000, guid: 2546365d1b8ff654595bf9bfca91808d, type: 3}
+  - {fileID: 8300000, guid: b9d2dbb4aa2eea2479a5e68543537aa6, type: 3}
+  - {fileID: 8300000, guid: b190ff97ff7b0634189c1b251bd423d4, type: 3}
+  - {fileID: 8300000, guid: d2437a9afb803ee45895392f7211e402, type: 3}
+  - {fileID: 8300000, guid: 50883fbcd7f16104db991ef737247b61, type: 3}
+  - {fileID: 8300000, guid: 44abd82799fd7d74cae2874c86e6ab3f, type: 3}
+  _OnTriggerexit:
+  - {fileID: 8300000, guid: 141010ec41732f04f9c339bba7dbd6fe, type: 3}
+  - {fileID: 8300000, guid: d58d7d73bcf1540468ffebc5099c8c51, type: 3}
+  - {fileID: 8300000, guid: 6bbb4b18c2f641f449ec91e8b83de2e3, type: 3}
+  - {fileID: 8300000, guid: 5f0129fb5bfb34e47b1ae9d930722d28, type: 3}
+  - {fileID: 8300000, guid: a6ae032758ea1b84da57b761dae9e176, type: 3}
+  - {fileID: 8300000, guid: 8e1b58d2d788bc34db0a02acfd92aaf8, type: 3}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

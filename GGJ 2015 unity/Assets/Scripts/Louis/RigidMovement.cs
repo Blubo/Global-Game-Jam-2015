@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using XInputDotNetPure;
 
 public class RigidMovement : MonoBehaviour {
@@ -16,6 +17,10 @@ public class RigidMovement : MonoBehaviour {
 	private Vector3 _movement, _velocity;
 
 	private bool reoriented, isInTrigger;
+
+	//SOUNDS
+	public List<AudioClip> _OnCollision;
+	public List<AudioClip> _OnTriggerexit;
 
 	// Use this for initialization
 	void Start () {
@@ -87,6 +92,9 @@ public class RigidMovement : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision){
+		audio.volume = 0.1f;
+		audio.PlayOneShot (_OnCollision [Random.Range (0, _OnCollision.Count)]);
+
 		Vector3 actualVelocity = gameObject.rigidbody.velocity;
 		actualVelocity.Normalize();
 		gameObject.rigidbody.velocity = actualVelocity*_velocity.magnitude;
@@ -99,6 +107,9 @@ public class RigidMovement : MonoBehaviour {
 
 	void OnTriggerExit(Collider collision){
 		gameObject.transform.Find("Pointe").renderer.enabled=false;
+		audio.volume = 1.0f;
+		audio.PlayOneShot (_OnTriggerexit [Random.Range (0, _OnTriggerexit.Count)]);
+
 
 		v_speed=v_initSpeed;
 		isInTrigger=false;
