@@ -69,7 +69,7 @@ GameObject:
   - 82: {fileID: 8200000}
   m_Layer: 0
   m_Name: 3Vert
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,7 +159,7 @@ GameObject:
   - 82: {fileID: 8200002}
   m_Layer: 0
   m_Name: Orange
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +198,7 @@ GameObject:
   - 82: {fileID: 8200004}
   m_Layer: 0
   m_Name: 1Rouge
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +238,7 @@ GameObject:
   - 82: {fileID: 8200006}
   m_Layer: 0
   m_Name: 2Bleu
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285,8 +285,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_LocalRotation: {x: 0, y: .258819044, z: 0, w: .965925813}
-  m_LocalPosition: {x: -19.2291698, y: 1, z: 6.60564899}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: -49.4974022, y: 1, z: 25.3756599}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400004}
@@ -351,8 +351,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
-  m_LocalRotation: {x: 0, y: .713319421, z: 0, w: .700839102}
-  m_LocalPosition: {x: -19.4721966, y: 1, z: .163481072}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: -49.4974022, y: 1, z: 30.0064545}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400022}
@@ -377,8 +377,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
-  m_LocalRotation: {x: 0, y: .263417006, z: 0, w: .964682102}
-  m_LocalPosition: {x: -23.585331, y: 1, z: 17.6286678}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: -49.4974022, y: 1, z: 19.4593487}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400010}
@@ -403,8 +403,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
-  m_LocalRotation: {x: 0, y: .382683486, z: 0, w: .923879564}
-  m_LocalPosition: {x: -24, y: 1, z: 13}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: -49.4974022, y: 1, z: 34.4500885}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400012}
@@ -1100,15 +1100,19 @@ MonoBehaviour:
   v_initSpeed: 0
   v_speed: 2000
   v_speedLoss: 100
+  v_dashCooldown: 5
+  v_dashSpeed: 750
+  v_dashBonusCooldown: 1
   v_rotationSpeedOnRebound: 1
+  v_readyToDash: 0
   _changesprite: 0
   _OnCollision:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 1650df709eb566840890eb5d391e0153, type: 3}
+  - {fileID: 8300000, guid: 4e9722977448a7f4594b7361afa9ac35, type: 3}
+  - {fileID: 8300000, guid: 69a8658827976234e970bf3c6c7b32e9, type: 3}
+  - {fileID: 8300000, guid: 8ba288feedf406a4ab6054580bdd1bc8, type: 3}
+  - {fileID: 8300000, guid: 8b5d01086ee87af47bd9b27155080086, type: 3}
+  - {fileID: 8300000, guid: d8d06b1de773e4742b3ebe63b849a79a, type: 3}
   _OnTriggerexit:
   - {fileID: 8300000, guid: 141010ec41732f04f9c339bba7dbd6fe, type: 3}
   - {fileID: 8300000, guid: d58d7d73bcf1540468ffebc5099c8c51, type: 3}
@@ -1176,17 +1180,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIndex: 0
   v_initSpeed: 0
-  v_speed: 3500
+  v_speed: 2000
   v_speedLoss: 100
+  v_dashCooldown: 5
+  v_dashSpeed: 750
+  v_dashBonusCooldown: 1
   v_rotationSpeedOnRebound: 1
+  v_readyToDash: 0
   _changesprite: 0
   _OnCollision:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 1650df709eb566840890eb5d391e0153, type: 3}
+  - {fileID: 8300000, guid: 4e9722977448a7f4594b7361afa9ac35, type: 3}
+  - {fileID: 8300000, guid: 69a8658827976234e970bf3c6c7b32e9, type: 3}
+  - {fileID: 8300000, guid: 8ba288feedf406a4ab6054580bdd1bc8, type: 3}
+  - {fileID: 8300000, guid: 8b5d01086ee87af47bd9b27155080086, type: 3}
+  - {fileID: 8300000, guid: d8d06b1de773e4742b3ebe63b849a79a, type: 3}
   _OnTriggerexit:
   - {fileID: 8300000, guid: 141010ec41732f04f9c339bba7dbd6fe, type: 3}
   - {fileID: 8300000, guid: d58d7d73bcf1540468ffebc5099c8c51, type: 3}
@@ -1256,15 +1264,19 @@ MonoBehaviour:
   v_initSpeed: 0
   v_speed: 2000
   v_speedLoss: 100
+  v_dashCooldown: 5
+  v_dashSpeed: 750
+  v_dashBonusCooldown: 1
   v_rotationSpeedOnRebound: 1
+  v_readyToDash: 0
   _changesprite: 0
   _OnCollision:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 1650df709eb566840890eb5d391e0153, type: 3}
+  - {fileID: 8300000, guid: 4e9722977448a7f4594b7361afa9ac35, type: 3}
+  - {fileID: 8300000, guid: 69a8658827976234e970bf3c6c7b32e9, type: 3}
+  - {fileID: 8300000, guid: 8ba288feedf406a4ab6054580bdd1bc8, type: 3}
+  - {fileID: 8300000, guid: 8b5d01086ee87af47bd9b27155080086, type: 3}
+  - {fileID: 8300000, guid: d8d06b1de773e4742b3ebe63b849a79a, type: 3}
   _OnTriggerexit:
   - {fileID: 8300000, guid: 141010ec41732f04f9c339bba7dbd6fe, type: 3}
   - {fileID: 8300000, guid: d58d7d73bcf1540468ffebc5099c8c51, type: 3}
@@ -1319,15 +1331,19 @@ MonoBehaviour:
   v_initSpeed: 0
   v_speed: 2000
   v_speedLoss: 100
+  v_dashCooldown: 5
+  v_dashSpeed: 750
+  v_dashBonusCooldown: 1
   v_rotationSpeedOnRebound: 1
+  v_readyToDash: 0
   _changesprite: 0
   _OnCollision:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 1650df709eb566840890eb5d391e0153, type: 3}
+  - {fileID: 8300000, guid: 4e9722977448a7f4594b7361afa9ac35, type: 3}
+  - {fileID: 8300000, guid: 69a8658827976234e970bf3c6c7b32e9, type: 3}
+  - {fileID: 8300000, guid: 8ba288feedf406a4ab6054580bdd1bc8, type: 3}
+  - {fileID: 8300000, guid: 8b5d01086ee87af47bd9b27155080086, type: 3}
+  - {fileID: 8300000, guid: d8d06b1de773e4742b3ebe63b849a79a, type: 3}
   _OnTriggerexit:
   - {fileID: 8300000, guid: 141010ec41732f04f9c339bba7dbd6fe, type: 3}
   - {fileID: 8300000, guid: d58d7d73bcf1540468ffebc5099c8c51, type: 3}

@@ -20,7 +20,7 @@ public class BoostScript : MonoBehaviour {
 			velocity.Normalize();
 
 			collider.gameObject.rigidbody.AddForce(velocity*1000f);
-			Debug.Log("ceci est le shadow");
+//			Debug.Log("ceci est le shadow");
 		}
 	}
 

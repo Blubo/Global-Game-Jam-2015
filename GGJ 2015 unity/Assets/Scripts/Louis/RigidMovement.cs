@@ -17,10 +17,13 @@ public class RigidMovement : MonoBehaviour {
 	private Color _myInitColor;
 	private Vector3 _movement, _velocity, _velocityBeforeDash, _DashMovement;
 
-	private bool reoriented, isInTrigger, _readyToDash, _benefitFromDash;
-	
+	private bool reoriented, isInTrigger, _benefitFromDash;
+
 	[HideInInspector]
-	public bool _changeSprite;
+	public bool v_readyToDash;
+
+	[HideInInspector]
+	public bool _changesprite;
 	//SOUNDS
 	public List<AudioClip> _OnCollision;
 	public List<AudioClip> _OnTriggerexit;
@@ -29,9 +32,9 @@ public class RigidMovement : MonoBehaviour {
 	void Start () {
 		gameObject.transform.Find("Pointe").renderer.enabled=false;
 
-		_myInitColor=gameObject.renderer.material.color;
+//		_myInitColor=gameObject.renderer.material.color;
 
-		_readyToDash=true;
+		v_readyToDash=true;
 		_benefitFromDash=false;
 
 		v_initSpeed=v_speed;
@@ -71,20 +74,20 @@ public class RigidMovement : MonoBehaviour {
 			_benefitFromDash=false;
 		}
 
-		if(_readyToDash==true){
-			gameObject.renderer.material.color = _myInitColor;
+		if(v_readyToDash==true){
+//			gameObject.renderer.material.color = _myInitColor;
 			if(prevState.Buttons.LeftShoulder == ButtonState.Released && state.Buttons.LeftShoulder == ButtonState.Pressed){
 				PseudoDash();
 			}
 		}else{
 			//premier feedback sur impossibilité de dash ?
-			gameObject.renderer.material.color = Color.gray;
+//			gameObject.renderer.material.color = Color.gray;
 			_dashTimer+=Time.deltaTime;
 		}
 
 		if(_dashTimer>v_dashCooldown){
 			_dashTimer=0f;
-			_readyToDash=true;
+			v_readyToDash=true;
 		}
 	}
 
@@ -105,7 +108,7 @@ public class RigidMovement : MonoBehaviour {
 		rigidbody.AddForce(_DashMovement, ForceMode.Force);
 
 		_benefitFromDash=true;
-		_readyToDash=false;
+		v_readyToDash=false;
 	}
 
 	void OnTriggerStay(Collider collision){

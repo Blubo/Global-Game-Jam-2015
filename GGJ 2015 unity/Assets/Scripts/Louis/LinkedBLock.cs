@@ -3,6 +3,9 @@ using System.Collections;
 
 public class LinkedBLock : MonoBehaviour {
 
+	public Sprite v_apparenceOrange, v_apparenceGrise;
+	private Sprite _actualApparence;
+
 	public GameObject v_firstTarget, v_secondTarget;
 	public float v_moveSpeed;
 	[HideInInspector]
@@ -12,6 +15,7 @@ public class LinkedBLock : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		_actualApparence=v_apparenceGrise;
 		moving = false;
 		movingTowards1=true;
 		movingTowards2=false;
@@ -19,6 +23,13 @@ public class LinkedBLock : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		GetComponent<SpriteRenderer> ().sprite = _actualApparence;
+		if(moving==true){
+			_actualApparence=v_apparenceOrange;
+		}else{
+			_actualApparence=v_apparenceGrise;
+		}
+
 		if(movingTowards1 == true){
 			MoveTowardsNext(v_firstTarget);
 			if(gameObject.transform.position == v_firstTarget.transform.position){

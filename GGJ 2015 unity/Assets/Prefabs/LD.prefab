@@ -4646,14 +4646,18 @@ MonoBehaviour:
   v_initSpeed: 0
   v_speed: 2000
   v_speedLoss: 100
+  v_dashCooldown: 0
+  v_dashSpeed: 0
+  v_dashBonusCooldown: 0
   v_rotationSpeedOnRebound: 1
+  _changesprite: 0
   _OnCollision:
-  - {fileID: 8300000, guid: 2546365d1b8ff654595bf9bfca91808d, type: 3}
-  - {fileID: 8300000, guid: b9d2dbb4aa2eea2479a5e68543537aa6, type: 3}
-  - {fileID: 8300000, guid: b190ff97ff7b0634189c1b251bd423d4, type: 3}
-  - {fileID: 8300000, guid: d2437a9afb803ee45895392f7211e402, type: 3}
-  - {fileID: 8300000, guid: 50883fbcd7f16104db991ef737247b61, type: 3}
-  - {fileID: 8300000, guid: 44abd82799fd7d74cae2874c86e6ab3f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _OnTriggerexit:
   - {fileID: 8300000, guid: 141010ec41732f04f9c339bba7dbd6fe, type: 3}
   - {fileID: 8300000, guid: d58d7d73bcf1540468ffebc5099c8c51, type: 3}
@@ -4708,14 +4712,18 @@ MonoBehaviour:
   v_initSpeed: 0
   v_speed: 2000
   v_speedLoss: 100
+  v_dashCooldown: 0
+  v_dashSpeed: 0
+  v_dashBonusCooldown: 0
   v_rotationSpeedOnRebound: 1
+  _changesprite: 0
   _OnCollision:
-  - {fileID: 8300000, guid: 2546365d1b8ff654595bf9bfca91808d, type: 3}
-  - {fileID: 8300000, guid: b9d2dbb4aa2eea2479a5e68543537aa6, type: 3}
-  - {fileID: 8300000, guid: b190ff97ff7b0634189c1b251bd423d4, type: 3}
-  - {fileID: 8300000, guid: d2437a9afb803ee45895392f7211e402, type: 3}
-  - {fileID: 8300000, guid: 50883fbcd7f16104db991ef737247b61, type: 3}
-  - {fileID: 8300000, guid: 44abd82799fd7d74cae2874c86e6ab3f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _OnTriggerexit:
   - {fileID: 8300000, guid: 141010ec41732f04f9c339bba7dbd6fe, type: 3}
   - {fileID: 8300000, guid: d58d7d73bcf1540468ffebc5099c8c51, type: 3}
@@ -4770,14 +4778,18 @@ MonoBehaviour:
   v_initSpeed: 0
   v_speed: 2000
   v_speedLoss: 100
+  v_dashCooldown: 0
+  v_dashSpeed: 0
+  v_dashBonusCooldown: 0
   v_rotationSpeedOnRebound: 1
+  _changesprite: 0
   _OnCollision:
-  - {fileID: 8300000, guid: 2546365d1b8ff654595bf9bfca91808d, type: 3}
-  - {fileID: 8300000, guid: b9d2dbb4aa2eea2479a5e68543537aa6, type: 3}
-  - {fileID: 8300000, guid: b190ff97ff7b0634189c1b251bd423d4, type: 3}
-  - {fileID: 8300000, guid: d2437a9afb803ee45895392f7211e402, type: 3}
-  - {fileID: 8300000, guid: 50883fbcd7f16104db991ef737247b61, type: 3}
-  - {fileID: 8300000, guid: 44abd82799fd7d74cae2874c86e6ab3f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _OnTriggerexit:
   - {fileID: 8300000, guid: 141010ec41732f04f9c339bba7dbd6fe, type: 3}
   - {fileID: 8300000, guid: d58d7d73bcf1540468ffebc5099c8c51, type: 3}
@@ -4832,14 +4844,18 @@ MonoBehaviour:
   v_initSpeed: 0
   v_speed: 2000
   v_speedLoss: 100
+  v_dashCooldown: 0
+  v_dashSpeed: 0
+  v_dashBonusCooldown: 0
   v_rotationSpeedOnRebound: 1
+  _changesprite: 0
   _OnCollision:
-  - {fileID: 8300000, guid: 2546365d1b8ff654595bf9bfca91808d, type: 3}
-  - {fileID: 8300000, guid: b9d2dbb4aa2eea2479a5e68543537aa6, type: 3}
-  - {fileID: 8300000, guid: b190ff97ff7b0634189c1b251bd423d4, type: 3}
-  - {fileID: 8300000, guid: d2437a9afb803ee45895392f7211e402, type: 3}
-  - {fileID: 8300000, guid: 50883fbcd7f16104db991ef737247b61, type: 3}
-  - {fileID: 8300000, guid: 44abd82799fd7d74cae2874c86e6ab3f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _OnTriggerexit:
   - {fileID: 8300000, guid: 141010ec41732f04f9c339bba7dbd6fe, type: 3}
   - {fileID: 8300000, guid: d58d7d73bcf1540468ffebc5099c8c51, type: 3}

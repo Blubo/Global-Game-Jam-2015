@@ -16,9 +16,15 @@ public class ChangingSprite : MonoBehaviour {
 	void Update () {
 		GetComponent<SpriteRenderer> ().sprite = _ActualFace;
 
-		if(transform.parent.GetComponent<RigidMovement>()._changesprite == true){
-			_ActualFace = _Faces[Random.Range(0,_Faces.Count)];
-			transform.parent.GetComponent<RigidMovement>()._changesprite = false;
+		if(transform.parent.GetComponent<RigidMovement>().v_readyToDash == true){
+			//0 est face normale
+			//1 est face venere
+			//2 est face kawaii
+			_ActualFace = _Faces[0];
+//			transform.parent.GetComponent<RigidMovement>()._changesprite = false;
+		}else{
+			_ActualFace = _Faces[1];
+
 		}
 	}
 }
