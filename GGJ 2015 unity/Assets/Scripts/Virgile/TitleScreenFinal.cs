@@ -49,6 +49,6 @@ public class TitleScreenFinal : MonoBehaviour {
 		//Une fois le zoom effectué alors on peut lancer la scène de jeu
 		yield return new WaitForSeconds(1.5f);
 
-		Application.LoadLevel ("NewCountdownScreen");
+		Application.LoadLevel ("MenuSelection");
 	}
 }
