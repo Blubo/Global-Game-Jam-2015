@@ -31,6 +31,7 @@ public class ScoreManager : MonoBehaviour {
 	IEnumerator EndOfTheGame(){
 		//On retient le nom du gagnant
 		PlayerPrefs.SetString ("Winner", gameObject.name);
+		Camera.main.GetComponent<GameOverManager> ().enabled = true;
 		//On rend visible l'annonce de fin de partie par un texte
 
 		yield return new WaitForSeconds(1.0f);

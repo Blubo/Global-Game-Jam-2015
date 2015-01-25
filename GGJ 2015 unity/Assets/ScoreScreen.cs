@@ -13,11 +13,19 @@ public class ScoreScreen : MonoBehaviour {
 	public int _Selection;
 	//0 = replay
 	//1 = TitleScreen
-	public List<GUIText> _Texts;
+	public List<GUIText> _Scores;
 
 	// Use this for initialization
 	void Start () {
-		_Texts [0].text = "the winner is  " + PlayerPrefs.GetString ("Winner");
+		_Scores [0].transform.position = new Vector3 (0.18f,0.9f,0.0f);
+		_Scores [1].transform.position = new Vector3 (0.42f,0.9f,0.9f);
+		_Scores [2].transform.position = new Vector3 (0.67f,0.9f,0.9f);
+		_Scores [3].transform.position = new Vector3 (0.9f,0.9f,0.9f);
+
+		_Scores [0].text =""+ PlayerPrefs.GetInt ("ScoreJ1");
+		_Scores [1].text =""+ PlayerPrefs.GetInt ("ScoreJ2");
+		_Scores [2].text =""+ PlayerPrefs.GetInt ("ScoreJ3");
+		_Scores [3].text =""+ PlayerPrefs.GetInt ("ScoreJ4");
 	}
 	
 	// Update is called once per frame
@@ -38,7 +46,6 @@ public class ScoreScreen : MonoBehaviour {
 
 		switch (_Selection) {
 				case(0):
-
 						if (state.Buttons.A == ButtonState.Pressed) {
 								Application.LoadLevel ("CountdownScreen");
 						}
