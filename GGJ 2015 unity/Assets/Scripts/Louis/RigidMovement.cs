@@ -10,12 +10,12 @@ public class RigidMovement : MonoBehaviour {
 	GamePadState state;
 	GamePadState prevState;
 
-	public float v_initSpeed, v_speed, v_baseSpeed, v_speedLoss, v_dashCooldown, v_dashSpeed, v_dashBonusCooldown;
+	public float v_initSpeed, v_speed, v_baseSpeed, v_speedLoss, v_dashCooldown, v_dashSpeed, v_dashBonusCooldown, v_authorizedImmobility;
 	[Range(0,1)]
 	public float v_rotationSpeedOnRebound;
-	private float _dashTimer, _dashBonusTimer;
+	private float _dashTimer, _dashBonusTimer, _immobileTiming;
 	private Color _myInitColor;
-	private Vector3 _movement, _velocity, _velocityBeforeDash, _DashMovement, _velocityBeforeStopping;
+	private Vector3 _movement, _velocity, _velocityBeforeDash, _DashMovement, _velocityBeforeStopping, _positionBeforeStopping;
 
 	private bool reoriented, isInTrigger, _benefitFromDash, _authorized;
 
@@ -28,12 +28,15 @@ public class RigidMovement : MonoBehaviour {
 	public List<AudioClip> _OnCollision;
 	public List<AudioClip> _OnTriggerexit;
 
+	public GameObject v_firstGoal;
+
 	// Use this for initialization
 	void Start () {
+		gameObject.GetComponent<ScoreManager>()._LastGoalHit = v_firstGoal;
 		gameObject.transform.Find("Pointe").renderer.enabled=false;
 
 //		_myInitColor=gameObject.renderer.material.color;
-
+		_immobileTiming=0f;
 		v_readyToDash=true;
 		_benefitFromDash=false;
 		_authorized = false;
@@ -100,6 +103,26 @@ public class RigidMovement : MonoBehaviour {
 			_dashTimer=0f;
 			v_readyToDash=true;
 		}
+
+//		if(gameObject.rigidbody.velocity.magnitude==0){
+//			_positionBeforeStopping = gameObject.transform.position;
+//			StartCoroutine("WaitUp");
+//
+//		}
+
+//		StartCoroutine("WaitUp");
+//		_positionBeforeStopping = gameObject.transform.position;
+//
+//		if(gameObject.transform.position == _positionBeforeStopping){
+//			_immobileTiming+=Time.deltaTime;
+//			if(_immobileTiming>3f){
+//				Debug.Log("immobile");
+//				_immobileTiming=0f;
+//				gameObject.transform.position=gameObject.GetComponent<ScoreManager>()._LastGoalHit.transform.position;
+//				gameObject.rigidbody.AddForce(gameObject.transform.forward*(v_baseSpeed + v_speed*(gameObject.GetComponent<PlayerState>()._Score+1)));
+//
+//			}
+//		}
 	}
 	
 	void Movement(){
@@ -187,4 +210,18 @@ public class RigidMovement : MonoBehaviour {
 			Movement();
 		}
 	}
+
+//	IEnumerator WaitUp(){
+//		yield return new WaitForSeconds(3);
+//		if(gameObject.transform.position == _positionBeforeStopping){
+//			_immobileTiming+=Time.deltaTime;
+//				if(_immobileTiming>3f){
+//					Debug.Log("immobile");
+//					_immobileTiming=0f;
+//					gameObject.transform.position=gameObject.GetComponent<ScoreManager>()._LastGoalHit.transform.position;
+//					gameObject.rigidbody.AddForce(gameObject.transform.forward*(v_baseSpeed + v_speed*(gameObject.GetComponent<PlayerState>()._Score+1)));
+//			
+//				}
+//			}
+//	}
 }

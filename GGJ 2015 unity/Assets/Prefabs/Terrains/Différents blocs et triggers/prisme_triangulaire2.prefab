@@ -25,6 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 64: {fileID: 6400000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: prisme_triangulaire2
   m_TagString: Untagged
@@ -70,6 +71,17 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 8de33b155f32e8d4a80e1cc93329b6aa, type: 3}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19bb55c0d2383140b83d922c8b453d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -343,6 +343,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8873779d1a33dca4f92cce3b5f32ea35, type: 2}
+      propertyPath: m_Name
+      value: CubeBoblle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8873779d1a33dca4f92cce3b5f32ea35, type: 2}
   m_RootGameObject: {fileID: 632709768}
@@ -1552,7 +1556,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 748405883}
-  m_RootOrder: 6
+  m_RootOrder: 2
 --- !u!212 &445470137
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2129,7 +2133,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 748405883}
-  m_RootOrder: 8
+  m_RootOrder: 4
 --- !u!212 &583834805
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2267,8 +2271,9 @@ GameObject:
   - 4: {fileID: 632709769}
   - 65: {fileID: 632709771}
   - 212: {fileID: 632709770}
+  - 114: {fileID: 632709772}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: CubeBoblle
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2285,7 +2290,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 748405883}
-  m_RootOrder: 5
+  m_RootOrder: 1
 --- !u!212 &632709770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2322,6 +2327,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.54999995, y: 2.54999995, z: 2.54999995}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &632709772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 632709768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19bb55c0d2383140b83d922c8b453d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &665880484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2663,15 +2679,15 @@ Transform:
   m_LocalPosition: {x: -16.7294044, y: -19.0158691, z: 1.90133667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1667782903}
-  - {fileID: 2070769500}
-  - {fileID: 1214793839}
-  - {fileID: 2045739060}
   - {fileID: 1415834000}
   - {fileID: 632709769}
   - {fileID: 445470136}
   - {fileID: 903197029}
   - {fileID: 583834804}
+  - {fileID: 1667782903}
+  - {fileID: 2070769500}
+  - {fileID: 1214793839}
+  - {fileID: 2045739060}
   m_Father: {fileID: 2027452472}
   m_RootOrder: 2
 --- !u!1 &791803349
@@ -2956,7 +2972,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 748405883}
-  m_RootOrder: 7
+  m_RootOrder: 3
 --- !u!1 &922008094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4377,7 +4393,7 @@ Transform:
   m_LocalScale: {x: 1.23121703, y: 2.40000057, z: 2}
   m_Children: []
   m_Father: {fileID: 748405883}
-  m_RootOrder: 2
+  m_RootOrder: 7
 --- !u!212 &1214793840
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5050,7 +5066,7 @@ Transform:
   m_LocalScale: {x: 1.72911382, y: 1.73130965, z: 2}
   m_Children: []
   m_Father: {fileID: 748405883}
-  m_RootOrder: 4
+  m_RootOrder: 0
 --- !u!212 &1415834001
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6223,7 +6239,7 @@ Transform:
   m_LocalScale: {x: 1.23121703, y: 2.4000001, z: 2}
   m_Children: []
   m_Father: {fileID: 748405883}
-  m_RootOrder: 0
+  m_RootOrder: 5
 --- !u!212 &1667782904
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7636,7 +7652,7 @@ Transform:
   m_LocalScale: {x: 1.72911453, y: 1.73131049, z: 2}
   m_Children: []
   m_Father: {fileID: 748405883}
-  m_RootOrder: 3
+  m_RootOrder: 8
 --- !u!212 &2045739061
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7845,7 +7861,7 @@ Transform:
   m_LocalScale: {x: 1.23121703, y: 2.4000001, z: 2}
   m_Children: []
   m_Father: {fileID: 748405883}
-  m_RootOrder: 1
+  m_RootOrder: 6
 --- !u!212 &2070769501
 SpriteRenderer:
   m_ObjectHideFlags: 0

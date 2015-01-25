@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 65: {fileID: 6500000}
   - 212: {fileID: 21200000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: CubeG
   m_TagString: Wall
@@ -41,6 +42,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.72000003, y: 5.5, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19bb55c0d2383140b83d922c8b453d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

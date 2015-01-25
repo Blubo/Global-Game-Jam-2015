@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 public class ScoreManager : MonoBehaviour {
 
-	private GameObject _LastGoalHit;
+	[HideInInspector]
+	public GameObject _LastGoalHit;
 
 	public List<AudioClip> _SonLourds;
 
