@@ -47,7 +47,7 @@ public class ScoreScreen : MonoBehaviour {
 		switch (_Selection) {
 				case(0):
 						if (state.Buttons.A == ButtonState.Pressed) {
-								Application.LoadLevel ("CountdownScreen");
+								Application.LoadLevel ("NewCountdownScreen");
 						}
 						break;
 			

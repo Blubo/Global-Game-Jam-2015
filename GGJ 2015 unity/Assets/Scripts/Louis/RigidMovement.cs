@@ -10,14 +10,14 @@ public class RigidMovement : MonoBehaviour {
 	GamePadState state;
 	GamePadState prevState;
 
-	public float v_initSpeed, v_speed, v_speedLoss, v_dashCooldown, v_dashSpeed, v_dashBonusCooldown;
+	public float v_initSpeed, v_speed, v_baseSpeed, v_speedLoss, v_dashCooldown, v_dashSpeed, v_dashBonusCooldown;
 	[Range(0,1)]
 	public float v_rotationSpeedOnRebound;
 	private float _dashTimer, _dashBonusTimer;
 	private Color _myInitColor;
-	private Vector3 _movement, _velocity, _velocityBeforeDash, _DashMovement;
+	private Vector3 _movement, _velocity, _velocityBeforeDash, _DashMovement, _velocityBeforeStopping;
 
-	private bool reoriented, isInTrigger, _benefitFromDash;
+	private bool reoriented, isInTrigger, _benefitFromDash, _authorized;
 
 	[HideInInspector]
 	public bool v_readyToDash;
@@ -36,11 +36,12 @@ public class RigidMovement : MonoBehaviour {
 
 		v_readyToDash=true;
 		_benefitFromDash=false;
+		_authorized = false;
 
 		v_initSpeed=v_speed;
 		reoriented=false;
-//		gameObject.rigidbody.AddForce(gameObject.transform.forward*v_speed);
-		gameObject.rigidbody.AddForce(gameObject.transform.forward*v_speed*(gameObject.GetComponent<PlayerState>()._Score+1)/10);
+		gameObject.rigidbody.AddForce(gameObject.transform.forward*(v_baseSpeed + v_speed*(gameObject.GetComponent<PlayerState>()._Score+1)));
+
 //		Debug.Log("speed : "+v_speed*((gameObject.GetComponent<PlayerState>()._Score+1)/10));
 	}
 	
@@ -52,6 +53,15 @@ public class RigidMovement : MonoBehaviour {
 		v_speed = Mathf.Clamp(v_speed, 0, v_initSpeed);
 		_velocity = gameObject.rigidbody.velocity;
 
+//		if(_authorized==false){
+//			if(gameObject.rigidbody.velocity!=Vector3.zero){
+//				_velocityBeforeStopping=gameObject.rigidbody.velocity;
+//			}else{
+//				gameObject.transform.forward = _velocityBeforeStopping.normalized;
+//				gameObject.rigidbody.AddForce(gameObject.transform.forward*(v_baseSpeed + v_speed*(gameObject.GetComponent<PlayerState>()._Score+1)));
+//			}
+//		}
+
 		if(isInTrigger==false){
 			gameObject.transform.forward = gameObject.rigidbody.velocity;
 		}
@@ -61,6 +71,7 @@ public class RigidMovement : MonoBehaviour {
 		}else{
 			_velocityBeforeDash = gameObject.rigidbody.velocity;
 		}
+
 		if(_dashBonusTimer>v_dashBonusCooldown){
 			Vector3 actualVelocity = gameObject.rigidbody.velocity;
 			actualVelocity.Normalize();
@@ -90,11 +101,12 @@ public class RigidMovement : MonoBehaviour {
 			v_readyToDash=true;
 		}
 	}
-
+	
 	void Movement(){
 		gameObject.rigidbody.velocity=Vector3.zero;
 		//((gameObject.GetComponent<PlayerState>()._Score+1)/10) = coefficient de vitesse en fonction du nombre de points
-		gameObject.rigidbody.AddForce(gameObject.transform.forward*v_speed*(gameObject.GetComponent<PlayerState>()._Score+1)/10);
+		gameObject.rigidbody.AddForce(gameObject.transform.forward*(v_baseSpeed + v_speed*(gameObject.GetComponent<PlayerState>()._Score+1)));
+		_authorized=false;
 	}
 
 	void PseudoDash(){
@@ -126,6 +138,7 @@ public class RigidMovement : MonoBehaviour {
 				if(state.Buttons.RightShoulder == ButtonState.Pressed){
 					if(reoriented==false){
 						reoriented=true;
+						_authorized=true;
 						Movement();
 					}
 				}
@@ -145,7 +158,12 @@ public class RigidMovement : MonoBehaviour {
 			Debug.Log(gameObject.name + " problem lies here");
 		}
 
-		if(isInTrigger==true && collision.gameObject.tag.Equals("Player")){
+//		if(isInTrigger==true && collision.gameObject.tag.Equals("Player")){
+//			//ici?
+//			gameObject.transform.forward = gameObject.rigidbody.velocity;
+//		}
+
+		if(isInTrigger==true){
 			//ici?
 			gameObject.transform.forward = gameObject.rigidbody.velocity;
 		}
@@ -160,10 +178,12 @@ public class RigidMovement : MonoBehaviour {
 		isInTrigger=false;
 		if(collision.gameObject.tag.Equals("TriggerZone")){
 			if(reoriented==false){
+				_authorized=true;
 				Movement();
 			}
 			reoriented=false;
 		}else{
+			_authorized=true;
 			Movement();
 		}
 	}

@@ -8,12 +8,13 @@ public class StartCountdown : MonoBehaviour {
 	public List<GameObject> _Players;
 	public List<TextMesh> _Texts;
 	public Transform _FinalPlacement;
+	public GameObject v_destinationCamera;
 
 	private bool _CameraGo = false;
 
 	// Use this for initialization
 	void Start () {
-		Camera.main.orthographicSize = 5;
+		Camera.main.orthographicSize = 12.58f;
 		StartCoroutine ("Introduction");
 
 		gui3.gameObject.guiText.enabled=false;
@@ -49,18 +50,27 @@ public class StartCountdown : MonoBehaviour {
 	void Update(){
 		//Replacement de la camera 
 		if(_CameraGo ){
-			if(Camera.main.orthographicSize <15){
-				Camera.main.orthographicSize += 0.5f;
+			if(Camera.main.orthographicSize <31.52f){
+				Camera.main.orthographicSize += 0.4f;
+				Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, v_destinationCamera.transform.position,1);
 			}
+
+			if(Camera.main.orthographicSize >31.52f){
+				Camera.main.orthographicSize = 31.52f;
+			}
+
 		}
 	}
 
 	IEnumerator Introduction(){
 		for(int i =0; i <_Players.Count; i++){
 			_Texts[i].transform.position = _Players[i].transform.position;
+			_Texts[i].transform.position = new Vector3(_Texts[i].transform.position.x+2f, _Texts[i].transform.position.y, _Texts[i].transform.position.z+0.75f);
 		}
 		yield return new WaitForSeconds (0.7f);
 		_CameraGo = true;
+		yield return new WaitForSeconds (3f);
+
 		StartCoroutine(GoHamCounter());
 	}
 
@@ -96,7 +106,7 @@ public class StartCountdown : MonoBehaviour {
 
 		//Passage au gameplay
 //		Application.LoadLevel("GameScene");
-		Application.LoadLevel("secondPlaytest");
+		Application.LoadLevel("ThirdPlaytest");
 
 	}
 }

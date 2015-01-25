@@ -34,6 +34,8 @@ public class ScoreManager : MonoBehaviour {
 		Camera.main.GetComponent<GameOverManager> ().enabled = true;
 		//On rend visible l'annonce de fin de partie par un texte
 
+		Camera.main.GetComponent<GameOverManager>().SetIntPlayer();
+
 		yield return new WaitForSeconds(1.0f);
 
 		//Passage à la scène de score

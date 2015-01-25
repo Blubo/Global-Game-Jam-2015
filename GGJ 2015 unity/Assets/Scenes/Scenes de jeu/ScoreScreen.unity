@@ -104,13 +104,13 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 31edad99f30845d47abdaed059daa16f, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 0
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278245632
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!4 &349445391
@@ -155,13 +155,13 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 6f8fda55a5246c649a3587f2c88515e9, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 0
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4294256133
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!4 &378321240
@@ -206,13 +206,13 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: c6befb9587358dc4689b8136c2fba760, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 0
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190325
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!4 &386901808
@@ -360,7 +360,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 53f10642059d45b49acfa1d231f397d2, type: 2}
+  - {fileID: 2100000, guid: 5e0cae11df00f0d489c4fcecf37d3c33, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -583,13 +583,13 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: fd2a40216cd496640b53473dae40344f, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 0
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278223349
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!4 &1677637982

@@ -4645,11 +4645,13 @@ MonoBehaviour:
   playerIndex: 0
   v_initSpeed: 0
   v_speed: 2000
+  v_baseSpeed: 0
   v_speedLoss: 100
   v_dashCooldown: 0
   v_dashSpeed: 0
   v_dashBonusCooldown: 0
   v_rotationSpeedOnRebound: 1
+  v_readyToDash: 0
   _changesprite: 0
   _OnCollision:
   - {fileID: 0}
@@ -4711,11 +4713,13 @@ MonoBehaviour:
   playerIndex: 0
   v_initSpeed: 0
   v_speed: 2000
+  v_baseSpeed: 0
   v_speedLoss: 100
   v_dashCooldown: 0
   v_dashSpeed: 0
   v_dashBonusCooldown: 0
   v_rotationSpeedOnRebound: 1
+  v_readyToDash: 0
   _changesprite: 0
   _OnCollision:
   - {fileID: 0}
@@ -4777,11 +4781,13 @@ MonoBehaviour:
   playerIndex: 0
   v_initSpeed: 0
   v_speed: 2000
+  v_baseSpeed: 0
   v_speedLoss: 100
   v_dashCooldown: 0
   v_dashSpeed: 0
   v_dashBonusCooldown: 0
   v_rotationSpeedOnRebound: 1
+  v_readyToDash: 0
   _changesprite: 0
   _OnCollision:
   - {fileID: 0}
@@ -4843,11 +4849,13 @@ MonoBehaviour:
   playerIndex: 1
   v_initSpeed: 0
   v_speed: 2000
+  v_baseSpeed: 0
   v_speedLoss: 100
   v_dashCooldown: 0
   v_dashSpeed: 0
   v_dashBonusCooldown: 0
   v_rotationSpeedOnRebound: 1
+  v_readyToDash: 0
   _changesprite: 0
   _OnCollision:
   - {fileID: 0}
